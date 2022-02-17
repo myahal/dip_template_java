@@ -2,6 +2,10 @@ package smarthome;
 
 public class SmartHome {
     static void run(Bulb bulb, Switch aSwitch) {
-        bulb.turnOn();
+        if (aSwitch.isOn()) {
+            bulb.turnOn();
+        } else {
+            bulb.turnOff();
+        }
     }
 }
